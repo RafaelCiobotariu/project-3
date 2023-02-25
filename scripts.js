@@ -37,7 +37,6 @@ function showLibraryInfo() {
 }
 
 function showBooksInLibrary() {
-  // SAVE TO LOCAL STORAGE
   localStorage.setItem("books", JSON.stringify(myLibrary));
   showLibraryInfo();
   const bookList = document.querySelector("#table-body");
@@ -48,10 +47,12 @@ function showBooksInLibrary() {
     bookList.appendChild(bookRow);
     // BOOK TITLE
     const bookTitle = document.createElement("td");
+    bookTitle.classList.add("tb-title");
     bookTitle.textContent = myLibrary[i].title;
     bookRow.appendChild(bookTitle);
     // BOOK AUTHOR
     const bookAuthor = document.createElement("td");
+    bookAuthor.classList.add("tb-author");
     bookAuthor.textContent = myLibrary[i].author;
     bookRow.appendChild(bookAuthor);
     // BOOK PAGES

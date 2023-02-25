@@ -57,11 +57,11 @@
           <table id="books-list">
             <thead id="book-requirements">
               <tr>
-                <td>TITLE</td>
-                <td>AUTHOR</td>
-                <td>PAGES</td>
-                <td>STATUS</td>
-                <td>REMOVAL</td>
+                <td class="tb-title">TITLE</td>
+                <td class="tb-author">AUTHOR</td>
+                <td class="tb-pages">PAGES</td>
+                <td >STATUS</td>
+                <td >REMOVAL</td>
               </tr>
             </thead>
             <tbody id="table-body">
@@ -69,6 +69,22 @@
           </table>
     </main>
 
+    <div id="modal" class="close">
+        <div class="modal-card">
+          <div class="modal-header">
+            <h2>BOOKS REMOVAL</h2>
+            <span class="close-modal close">&times;</span>
+          </div>
+          <div class="modal-content">
+            <p>Do you really want to delete all the books from your library?</p>
+            <div class="modal-options">
+              <button type="button" class="cancel-removal close">Cancel</button>
+              <button type="button" class="confirm-removal">DELETE ALL</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
     <script type="text/javascript" src="./scripts.js"></script>
 </body>
 </html>
