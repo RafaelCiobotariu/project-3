@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Library</title>
+</head>
+<body>
+    <section class="left-nav">
+        <header class="left-header">
+            <h1>Library</h1>
+        </header>
+        <form class="left-form">
+            <div class="input-block">
+                <input id="title" type="text" name="title" autocomplete="off" required>
+                <span class="placeholder">Title of the book?*</span>
+                <div class="validation-block">
+                  <p class="validation-text title">Please fill out this field.</p>
+                </div>
+              </div>
+            <div class="input-block">
+                <input id="author" type="text" name="author" required>
+                <span class="placeholder"> Author*</span>
+                <div class="validation-block">
+                    <p class="validation-text author">Please fill out this field</p>
+                </div>
+            </div>
+            <div class="input-block">
+                <input id="pages" type="number" name="pages" required>
+                <span class="placeholder"> Number of pages* </span>
+                <div class="validation-block">
+                    <p class="validation-text pages">Please add a positive number</p>
+                </div>
+            </div>
+            <label class="checkbox">
+                <span class="checkbox-input">
+                    <input type="checkbox" name="checkbox" autocomplete="off">
+                </span>
+                <span class="checkbox-label">
+                    I have read this book
+                </span>
+            </label>
+            <input type="button" value="Add a new book" id="add-book">
+        </form>
+    </section>
+
+    <main id="library-content">
+        <section id="library-info">
+            <p>BOOKS READ: <span id="books-read"></span></p>
+            <p>BOOKS UNREAD: <span id="books-unread"></span></p>
+            <p>TOTAL BOOKS: <span id="total-books"></span></p>
+            <button type="button" id="delete-all-btn">DELETE ALL</button>
+        </section>
+          
+          <table id="books-list">
+            <thead id="book-requirements">
+              <tr>
+                <td>TITLE</td>
+                <td>AUTHOR</td>
+                <td>PAGES</td>
+                <td>STATUS</td>
+                <td>REMOVAL</td>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+          </table>
+    </main>
+
+    <script type="text/javascript" src="./scripts.js"></script>
+</body>
+</html>
